@@ -44,7 +44,7 @@ namespace Objektum_Orientált_programozás
             set;
         }
 
-        public Konyv(string azonosito, string cim, string szerzo, int ar) : this(azonosito, cim, szerzo, ar, 1) 
+        public Konyv(string azonosito, string cim, string szerzo, int ar) : this(azonosito, cim, szerzo, ar, 6) 
         {
             
         }
@@ -56,7 +56,7 @@ namespace Objektum_Orientált_programozás
             Szerzo = szerzo;
             Ar = ar;
             RaktarKeszlet = raktarKeszlet;
-            osszesRegisztraltKonyv++;
+            OsszesRegisztraltKonyv++;
         }
 
         public override string ToString() 

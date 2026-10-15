@@ -7,8 +7,15 @@ if (File.Exists("konyvek.txt"))
         string[] adatok = sor.Split(';');
         int db = adatok.Count();
         if (db != 5) continue;
-        if (int.TryParse(adatok[1], out int azonosito) && int.TryParse(adatok[2], out int cim)&& int.TryParse(adatok[3], out int szerzo)&& int.TryParse(adatok[4], out int ar)&& int.TryParse(adatok[5], out int raktarKeszlet))
-        //string azonosito = adatok[0];
+        if (int.TryParse(adatok[3], out int ar) && int.TryParse(adatok[5], out int raktarKeszlet)) 
+        {
+            if (!string.IsNullOrWhiteSpace(adatok[0]))
+            {
+                Konyv akt = new Konyv(adatok[0], adatok[1], adatok[2], ar, raktarKeszlet);
+                konyvek.Add(akt);
+            }
+        }
+        //string azonosito = adatok[0];adatok[0], azonosito, cim, szerzo, ar, raktarKeszlet
         //string cim = adatok[1];
         //string szerzo = adatok[2];
 
@@ -18,7 +25,5 @@ if (File.Exists("konyvek.txt"))
         //konyvek.Add(konyv);
     }
 }
-else
-{
-    Console.WriteLine("A konyvek.txt fájl nem található.");
-}
+else Console.WriteLine("A konyvek.txt fájl nem található.");
+Console.WriteLine("=== BEOLVASOTT KÖNXVEK ===");
