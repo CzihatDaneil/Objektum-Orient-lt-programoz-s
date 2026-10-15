@@ -51,6 +51,11 @@ namespace Objektum_Orientált_programozás
 
         public Konyv(string azonosito, string cim, string szerzo, int ar, int raktarKeszlet)
         {
+            Azonosito = azonosito;
+            Cim = cim;
+            Szerzo = szerzo;
+            Ar = ar;
+            RaktarKeszlet = raktarKeszlet;
             osszesRegisztraltKonyv++;
         }
 
