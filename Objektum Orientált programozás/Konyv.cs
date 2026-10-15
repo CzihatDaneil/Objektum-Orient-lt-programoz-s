@@ -16,32 +16,19 @@ namespace Objektum_Orientált_programozás
         public int Ar 
         {
             get { return Ar; }
-            set
-            {
-                if (ar < 0)
-                {
-                    Ar = 0;
-                }
-                else Ar = ar;
-            }
+            set=> ar =value < 0 ? 0 : value;
+
         }
         public int RaktarKeszlet 
         {
             get { return RaktarKeszlet; }
-            set
-            {
-                if (raktarKeszlet < 0)
-                {
-                    RaktarKeszlet = 0;
-                }
-                else RaktarKeszlet = raktarKeszlet;
-            }
+            set => raktarKeszlet = value < 0 ? 0 : value;
         }
         
         public int OsszesRegisztraltKonyv 
         {
-            get { return OsszesRegisztraltKonyv; }
-            set;
+            get { return osszesRegisztraltKonyv; }
+            set ;
         }
 
         public Konyv(string azonosito, string cim, string szerzo, int ar) : this(azonosito, cim, szerzo, ar, 6) 
